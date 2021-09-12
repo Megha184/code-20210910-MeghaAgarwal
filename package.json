@@ -1,0 +1,22 @@
+{
+  "name": "code-20210910-meghaagarwal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Megha184/code-20210910-MeghaAgarwal.git"
+  },
+  "keywords": [
+    "bmi"
+  ],
+  "author": "Megha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Megha184/code-20210910-MeghaAgarwal/issues"
+  },
+  "homepage": "https://github.com/Megha184/code-20210910-MeghaAgarwal#readme"
+}
