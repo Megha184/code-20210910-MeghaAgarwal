@@ -1,36 +1,36 @@
 [
     {
       "max": 18.4,
-      "healthRisk": "Malnutrition Risk",
-      "bmiCategory": "Underweight"
+      "HealthRisk": "Malnutrition Risk",
+      "BMICategory": "Underweight"
     },
     {
       "min": 18.5,
       "max": 24.9,
-      "healthRisk": "Low Risk",
-      "bmiCategory": "Normal weight"
+      "HealthRisk": "Low Risk",
+      "BMICategory": "Normal weight"
     },
     {
       "min": 25,
       "max": 29.9,
-      "healthRisk": "Enhanced risk",
-      "bmiCategory": "Overweight"
+      "HealthRisk": "Enhanced risk",
+      "BMICategory": "Overweight"
     },
     {
       "min": 30,
       "max": 34.9,
-      "healthRisk": "Medium risk",
-      "bmiCategory": "Moderately Obese"
+      "HealthRisk": "Medium risk",
+      "BMICategory": "Moderately Obese"
     },
     {
       "min": 35,
       "max": 39.9,
-      "healthRisk": "High risk",
-      "bmiCategory": "Severely obese"
+      "HealthRisk": "High risk",
+      "BMICategory": "Severely obese"
     },
     {
       "min": 40,
-      "healthRisk": "Very high risk",
-      "bmiCategory": "Very severely obese"
+      "HealthRisk": "Very high risk",
+      "BMICategory": "Very severely obese"
     }
   ]

@@ -9,24 +9,26 @@ const updateBmiListWithDetails = list =>
   list.map(detail => {
     const { HeightCm, WeightKg } = detail;
     const Heightm = parseCmToM(HeightCm);
-    const bmi = getBMI(WeightKg, Heightm);
+    const BMI = getBMI(WeightKg, Heightm);
     const bmiTableItem = bmiTable.find(({ min, max }) => {
       if (min) {
-        if (max) return min <= bmi && max >= bmi;
-        else return min <= bmi;
-      } else return max >= bmi;
+        if (max) return min <= BMI && max >= BMI;
+        else return min <= BMI;
+      } else return max >= BMI;
     });
-    const { bmiCategory, healthRisk } = bmiTableItem || {};
+    const { BMICategory, HealthRisk } = bmiTableItem || {};
     return {
       ...detail,
-      bmi,
-      bmiCategory,
-      healthRisk,
+      BMI,
+      BMICategory,
+      HealthRisk,
     };
   });
 const updatedBMIList = updateBmiListWithDetails(bmiList);
 
 let countOverweight = getNoOfMembersInBMICategory(updatedBMIList,"Overweight");
-
+// Prints in object structure
 console.log(updatedBMIList);
 console.log(countOverweight);
+//Prints in tabular form
+console.table(updatedBMIList);
