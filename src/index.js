@@ -1,55 +1,5 @@
-const bmiList = [
-    { "Gender": "Male", "HeightCm": 171, "WeightKg": 96 },
-    {
-      "Gender": "Male",
-      "HeightCm": 161,
-      "WeightKg": 85
-    },
-    { "Gender": "Male", "HeightCm": 180, "WeightKg": 77 },
-    {
-      "Gender": "Female",
-      "HeightCm": 166,
-      "WeightKg": 62
-    },
-    { "Gender": "Female", "HeightCm": 150, "WeightKg": 70 },
-    { "Gender": "Female", "HeightCm": 167, "WeightKg": 82 }
-  ]
-const bmiTable = [
-    {
-      "max": 18.4,
-      "healthRisk": "Malnutrition Risk",
-      "bmiCategory": "Underweight"
-    },
-    {
-      "min": 18.5,
-      "max": 24.9,
-      "healthRisk": "Low Risk",
-      "bmiCategory": "Normal weight"
-    },
-    {
-      "min": 25,
-      "max": 29.9,
-      "healthRisk": "Enhanced risk",
-      "bmiCategory": "Overweight"
-    },
-    {
-      "min": 30,
-      "max": 34.9,
-      "healthRisk": "Medium risk",
-      "bmiCategory": "Moderately Obese"
-    },
-    {
-      "min": 35,
-      "max": 39.9,
-      "healthRisk": "High risk",
-      "bmiCategory": "Severely obese"
-    },
-    {
-      "min": 40,
-      "healthRisk": "Very high risk",
-      "bmiCategory": "Very severely obese"
-    }
-  ]
+const bmiList = require("./data/bmi-list.json");
+const bmiTable = require("./data/bmi-table.json");
 
   const updateBmiListWithDetails = list =>
   list.map(detail => {
