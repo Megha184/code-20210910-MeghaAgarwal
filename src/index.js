@@ -1,11 +1,15 @@
 const bmiList = require("./data/bmi-list.json");
 const bmiTable = require("./data/bmi-table.json");
-
-  const updateBmiListWithDetails = list =>
+const {
+  parseCmToM,
+  getBMI,
+  getNoOfMembersInBMICategory,
+} = require("./utils/helper.js");
+const updateBmiListWithDetails = list =>
   list.map(detail => {
     const { HeightCm, WeightKg } = detail;
-    const Heightm = HeightCm/100;
-    const bmi = WeightKg/Heightm**2;
+    const Heightm = parseCmToM(HeightCm);
+    const bmi = getBMI(WeightKg, Heightm);
     const bmiTableItem = bmiTable.find(({ min, max }) => {
       if (min) {
         if (max) return min <= bmi && max >= bmi;
@@ -22,7 +26,7 @@ const bmiTable = require("./data/bmi-table.json");
   });
 const updatedBMIList = updateBmiListWithDetails(bmiList);
 
-let countOverweight = updatedBMIList.filter(item => item.bmiCategory === "Overweight").length;
+let countOverweight = getNoOfMembersInBMICategory(updatedBMIList,"Overweight");
 
 console.log(updatedBMIList);
 console.log(countOverweight);
